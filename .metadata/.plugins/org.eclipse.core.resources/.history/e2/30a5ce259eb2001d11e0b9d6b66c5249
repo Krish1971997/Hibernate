@@ -1,0 +1,41 @@
+package com.stu.onetomanydirection.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="devices")
+public class Device {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="device_id")
+	private int deviceID;
+	private String deviceName;
+	private String dateOfIssue;
+
+	public int getDeviceID() {
+		return deviceID;
+	}
+	public void setDeviceID(int deviceID) {
+		this.deviceID = deviceID;
+	}
+	public String getDeviceName() {
+		return deviceName;
+	}
+	public void setDeviceName(String deviceName) {
+		this.deviceName = deviceName;
+	}
+	public String getDateOfIssue() {
+		return dateOfIssue;
+	}
+	public void setDateOfIssue(String dateOfIssue) {
+		this.dateOfIssue = dateOfIssue;
+	}
+	
+
+}
