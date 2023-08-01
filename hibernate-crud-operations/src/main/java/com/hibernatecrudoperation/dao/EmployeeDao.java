@@ -12,7 +12,7 @@ public class EmployeeDao {
 	public Employee saveEmployee(Employee employee) {
 		EntityManagerFactory enitymangerFactory=Persistence.createEntityManagerFactory("dev");
 		EntityManager entityManager=enitymangerFactory.createEntityManager();
-		
+		// from visual studio
 		EntityTransaction tx=entityManager.getTransaction();
 		try {
 			tx.begin();
